@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AgentRest.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240822084240_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240826120123_initialCreate")]
+    partial class initialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,6 +49,10 @@ namespace AgentRest.Migrations
 
                     b.Property<int>("YPostion")
                         .HasColumnType("int");
+
+                    b.Property<string>("photoUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -109,6 +113,10 @@ namespace AgentRest.Migrations
 
                     b.Property<int>("YPostion")
                         .HasColumnType("int");
+
+                    b.Property<string>("photoUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

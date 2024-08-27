@@ -47,6 +47,10 @@ namespace AgentRest.Migrations
                     b.Property<int>("YPostion")
                         .HasColumnType("int");
 
+                    b.Property<string>("photoUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("AgentSet");
@@ -106,6 +110,10 @@ namespace AgentRest.Migrations
 
                     b.Property<int>("YPostion")
                         .HasColumnType("int");
+
+                    b.Property<string>("photoUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

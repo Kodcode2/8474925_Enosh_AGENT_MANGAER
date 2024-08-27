@@ -5,7 +5,7 @@
 namespace AgentRest.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class initialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,6 +17,7 @@ namespace AgentRest.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NickName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    photoUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Image = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     XPostion = table.Column<int>(type: "int", nullable: false),
                     YPostion = table.Column<int>(type: "int", nullable: false),
@@ -34,6 +35,7 @@ namespace AgentRest.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    photoUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Role = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     XPostion = table.Column<int>(type: "int", nullable: false),
                     YPostion = table.Column<int>(type: "int", nullable: false),

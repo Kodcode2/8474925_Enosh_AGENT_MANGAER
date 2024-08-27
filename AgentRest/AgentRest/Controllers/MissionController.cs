@@ -19,9 +19,10 @@ namespace AgentRest.Controllers
         private IMissionService _missionService => serviceProvider.GetRequiredService<IMissionService>();
 
         [HttpGet]
-        public ActionResult GetAll()
+        public ActionResult GetAll(TargetModel target)
         {
-            return Ok(new List<MissionModel>(_context.MissionSet));
+
+            return Ok(new List<TargetModel>(_context.TargetSet));
         }
 
         [HttpPost("create")]
@@ -32,6 +33,7 @@ namespace AgentRest.Controllers
             _context.MissionSet.Add(model);
             return Created();
         }
+
 
         [HttpPut("update{id}")]
         public ActionResult<MissionModel> Update(int id, MissionModel newMission)

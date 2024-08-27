@@ -5,6 +5,7 @@
     {
         public int Id { get; set; }
         public string NickName { get; set; }
+        public string photoUrl { get; set; }
         public string Image { get; set; }
         public int XPostion {  get; set; } 
         public int YPostion {  get; set; } 
